@@ -1,3 +1,5 @@
+import {Button} from "@/app/ui/components/button.component";
+
 export default function Login() {
   return (
     <div className="flex flex-col justify-center items-center gap-10 p-10">
@@ -9,8 +11,12 @@ export default function Login() {
         <h3 className="text-center">Enter with your E-mail to do login</h3>
         <input type="email" placeholder="E-mail" />
         <input type="password" placeholder="Password" />
-        <button type="submit">Login</button>
-        <button type="button">Sign Up</button>
+        <Button btnType="default" btnSize="def" type="submit">
+          Login
+        </Button>
+        <Button btnType="sercundary" btnSize="def" type="button">
+          Sign Up
+        </Button>
       </div>
       <hr />
       <span>Conheca nossa politica de privacidade</span>
