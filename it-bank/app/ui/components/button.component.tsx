@@ -1,9 +1,11 @@
 import { mergeClassNames } from '@/app/lib/css.helpers';
+import Link from 'next/link';
 import * as React from 'react';
 
 const buttonTypes = {
     default: 'bg-black hover:bg-gray-700 text-white font-bold py-2 px-4 rounded cursor-pointer',
-    sercundary: 'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded cursor-pointer',
+    secondary: 'bg-blue-500 hover:bg-blue-700 text-white text-center font-bold py-2 px-4 rounded cursor-pointer',
+    destructive: 'bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded cursor-pointer',
 } as const;
 
 export type ButtonTypes = {
@@ -26,6 +28,26 @@ export type ButtonSizes = {
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement>,
    ButtonTypes, ButtonSizes {};
 
+export interface LinkButtonProps extends ButtonProps {
+    href: string;
+}
+
+function LinkButton(props: LinkButtonProps) {
+    const { btnType, btnSize, className, children, href } = props;
+    const btnTypecn = buttonTypes[btnType];
+    const btnSizecn = buttonSizes[btnSize];
+
+    return (
+        <Link href={href} className={mergeClassNames(
+            btnTypecn,
+            btnSizecn,
+            className
+        )}
+        >
+            {children}
+        </Link>
+    )
+}
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((
     {
@@ -49,4 +71,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>((
 }
 )
 
-export {Button};
+export {Button, LinkButton};

@@ -1,4 +1,4 @@
-import { Button } from "@/app/ui/components/button.component";
+import { Button, LinkButton } from "@/app/ui/components/button.component";
 import { Input } from "@/app/ui/components/input.component";
 
 export default function Login() {
@@ -15,9 +15,9 @@ export default function Login() {
         <Button btnType="default" btnSize="def" type="submit">
           Login
         </Button>
-        <Button btnType="sercundary" btnSize="def" type="button">
+        <LinkButton href="/signUp" btnType="secondary" btnSize="def" type="button">
           Sign Up
-        </Button>
+        </LinkButton>
       </div>
       <hr className="w-full border-gray-300" />
       <span className="text-sm">Conheca nossa politica de privacidade</span>
