@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Menu } from '../ui/components/menu.component';
 
 export default function Statement() {
     return (
@@ -66,6 +67,7 @@ export default function Statement() {
                 </table>
             </div>
         </div>
+        <Menu />
     </div>
     );
 }

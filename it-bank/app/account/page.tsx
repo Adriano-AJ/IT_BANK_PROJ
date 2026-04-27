@@ -1,9 +1,10 @@
 import * as React from "react";
+import { Menu } from "../ui/components/menu.component";
 
 export default function Account() {
   return (
     <div className="flex flex-col justify-center gap-10 p-10">
-      <h1 className="text-3xl font-bold m-5 leading-10 pt-10 pb-10">Bem vindo, Emilio Resende</h1>
+      <h1 className="text-3xl font-bold m-5 leading-10 pt-10 pb-10">Bem vindo, Adriano Júnior</h1>
       <div className="flex flex-col justify-center m-5 space-y-5">
         <h2 className="font-bold text-left leading-5 pb-2">Selecione sua conta para iniciar</h2>
         <table>
@@ -28,6 +29,7 @@ export default function Account() {
             </tbody>   
         </table>
       </div>
+      <Menu />
     </div>
   );
 }
