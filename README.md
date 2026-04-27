@@ -1,6 +1,6 @@
 # 🚀 Projeto Final: It Bank
 
-Este projeto representa a culminação do módulo de Front-end no **Bootcamp Impacta-FullStack**. A aplicação foi desenvolvida para consolidar conceitos avançados de desenvolvimento web moderno, integrando performance, tipagem robusta e design responsivo.
+Este projeto representa a culminação do módulo de Front-end no **Bootcamp Impacta-FullStack**. A aplicação foi desenvolvida para consolidar conceitos avançados de desenvolvimento web moderno.
 
 ## 🎯 Objetivos do Projeto
 Consolidar o aprendizado prático focado em:
